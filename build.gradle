@@ -1,0 +1,13 @@
+plugins {
+    id 'java'
+}
+
+group 'raven'
+version '1.4'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+}
