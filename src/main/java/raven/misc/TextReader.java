@@ -68,7 +68,8 @@ public class TextReader implements Closeable {
 
 	/**
 	 * Reads the next line in the input. The line delimiter is part of the returned
-	 * string
+	 * 
+	 
 	 * 
 	 * @return The respective line or an <code>null</code> if the end of the input
 	 *         is reached
@@ -160,6 +161,8 @@ public class TextReader implements Closeable {
 		if (!stringClosed) {
 			throw new IllegalStateException("Encountered unclosed String-definition in input!");
 		}
+		
+		consumeWhitespace();
 
 		return c == (char) -1 && builder.length() == 0 ? null : builder.toString();
 	}
