@@ -1,1 +1,0 @@
-#include "IncludeErrorTest06Helper.sqf"
