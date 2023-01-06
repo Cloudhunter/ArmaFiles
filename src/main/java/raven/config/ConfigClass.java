@@ -220,7 +220,7 @@ public class ConfigClass implements ITextifyable {
 			reader.consumeWhitespace();
 		}
 
-		return new ConfigClass(className, "", entries.toArray(new ConfigClassEntry[entries.size()]));
+		return new ConfigClass(className, parentClass, entries.toArray(new ConfigClassEntry[entries.size()]));
 	}
 
 	/**
