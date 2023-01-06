@@ -164,6 +164,7 @@ public class ValueEntry extends FieldEntry {
 		}
 		if (Character.isDigit(c) || c == '-' || c == '+') {
 			float num = reader.readNumber();
+			reader.consumeWhitespace();
 
 			if (num == (long) num) {
 				// must be a long
