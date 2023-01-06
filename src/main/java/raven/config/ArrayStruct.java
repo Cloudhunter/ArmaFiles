@@ -124,6 +124,8 @@ public class ArrayStruct implements ITextifyable {
 				content.add(ValueEntry.fromText(reader, null));
 			}
 		}
+		
+		reader.consumeWhitespace();
 
 		return new ArrayStruct(content.toArray(new ConfigClassEntry[content.size()]));
 	}
