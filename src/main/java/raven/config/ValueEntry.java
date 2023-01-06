@@ -26,7 +26,7 @@ public class ValueEntry extends FieldEntry {
 	 */
 	public static final byte LONG = 2;
 	/**
-	 * Indicator for a SteamID - handled as string
+	 * Indicator for a SteamID - handled as long
 	 */
 	public static final byte STEAMID = 6;
 
@@ -136,11 +136,11 @@ public class ValueEntry extends FieldEntry {
 
 		switch (dataType) {
 		case STRING:
-		case STEAMID:
 			return new ValueEntry(varName, reader.readString());
 		case FLOAT:
 			return new ValueEntry(varName, reader.readFloat());
 		case LONG:
+		case STEAMID:
 			return new ValueEntry(varName, reader.readInt32());
 		default:
 			throw new RapificationException("Unknown data type: " + dataType);
