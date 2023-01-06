@@ -25,6 +25,10 @@ public class ValueEntry extends FieldEntry {
 	 * Indicator for a long-type
 	 */
 	public static final byte LONG = 2;
+	/**
+	 * Indicator for a SteamID - handled as string
+	 */
+	public static final byte STEAMID = 6;
 
 
 	/**
