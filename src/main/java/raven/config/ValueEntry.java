@@ -136,6 +136,7 @@ public class ValueEntry extends FieldEntry {
 
 		switch (dataType) {
 		case STRING:
+		case STEAMID:
 			return new ValueEntry(varName, reader.readString());
 		case FLOAT:
 			return new ValueEntry(varName, reader.readFloat());
