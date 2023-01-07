@@ -140,8 +140,9 @@ public class ValueEntry extends FieldEntry {
 		case FLOAT:
 			return new ValueEntry(varName, reader.readFloat());
 		case LONG:
-		case STEAMID:
 			return new ValueEntry(varName, reader.readInt32());
+		case STEAMID:
+			return new ValueEntry(varName, reader.readInt64());
 		default:
 			throw new RapificationException("Unknown data type: " + dataType);
 		}
