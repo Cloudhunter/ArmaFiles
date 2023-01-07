@@ -121,6 +121,22 @@ public class ByteReader implements Closeable {
 
 		return ByteBuffer.wrap(bytes).order(ByteOrder.LITTLE_ENDIAN).getInt();
 	}
+	
+	/**
+	 * Reads 8 bytes as an integer (little endian encoding).
+	 * 
+	 * @return The converted integer
+	 * @throws IOException
+	 */
+	public long readInt64() throws IOException {
+		byte[] bytes = new byte[8];
+
+		for (int i = 0; i < 8; i++) {
+			bytes[i] = (byte) read();
+		}
+
+		return ByteBuffer.wrap(bytes).order(ByteOrder.LITTLE_ENDIAN).getLong();
+	}
 
 	public float readFloat() throws IOException {
 		byte[] bytes = new byte[4];
